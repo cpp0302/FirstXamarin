@@ -59,4 +59,10 @@
   <ItemGroup>
     <Folder Include="Resources\layout\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirstDemo.Core\FirstDemo.Core.csproj">
+      <Project>{435DD5E8-0350-4FCD-901E-341A6E040A6A}</Project>
+      <Name>FirstDemo.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

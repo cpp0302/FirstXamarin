@@ -89,6 +89,7 @@
     <AndroidResource Include="Resources\Values\Strings.xml" />
     <AndroidResource Include="Resources\Layout\Main.axml" />
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

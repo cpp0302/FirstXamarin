@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Android.App;
 using Cirrious.MvvmCross.Droid.Views;
 
 namespace FirstDemo.Droid

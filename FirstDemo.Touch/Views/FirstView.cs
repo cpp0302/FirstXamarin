@@ -37,7 +37,7 @@ namespace FirstDemo.Touch.Views
             var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
 			set.Bind(textEditFirst).To(vm => vm.FirstName);
 			set.Bind(textEditSecond).To(vm => vm.LastName);
-			set.Bind(labelFull).To(vm => vm.FullName;
+			set.Bind(labelFull).To(vm => vm.FullName);
             set.Apply();
         }
     }

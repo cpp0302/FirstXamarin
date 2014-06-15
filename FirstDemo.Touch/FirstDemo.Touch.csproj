@@ -86,6 +86,10 @@
     <BundleResource Include="Resources\Default-568h@2x.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FirstDemo.Core\FirstDemo.Core.csproj">
+      <Project>{435dd5e8-0350-4fcd-901e-341a6e040a6a}</Project>
+      <Name>FirstDemo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

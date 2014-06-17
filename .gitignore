@@ -154,3 +154,8 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/packages/MvvmCross.HotTuna.CrossCore.3.1.1
+/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1
+/packages/MvvmCross.HotTuna.StarterPack.3.1.1
+/packages/MvvmCross.PortableSupport.3.1.1
+/packages/repositories.config

@@ -5,7 +5,7 @@ using Cirrious.MvvmCross.Droid.Views;
 namespace TipCalc.Droid
 {
     [Activity(
-		Label = "TipCalc.Droid"
+		Label = "TipCalc"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"

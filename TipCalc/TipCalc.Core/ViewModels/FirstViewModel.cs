@@ -37,7 +37,6 @@ namespace TipCalc.Core.ViewModels
 			set { _tip = value; RaisePropertyChanged(() => Tip); }
 		}
 
-
 		private double _total;
 		public double Total
 		{

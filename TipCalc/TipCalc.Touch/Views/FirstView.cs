@@ -56,6 +56,14 @@ namespace TipCalc.Touch.Views
 			set.Bind(tipLabel).To(vm => vm.Tip);
 			set.Bind(totalLabel).To(vm => vm.Total);
 			set.Apply();
+
+			//タップでキーボードを出す
+			var gesture = new UITapGestureRecognizer(() =>
+			{
+				subTotalTextField.ResignFirstResponder();
+			});
+
+			View.AddGestureRecognizer(gesture);
         }
     }
 }

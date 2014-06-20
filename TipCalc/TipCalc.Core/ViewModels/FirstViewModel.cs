@@ -41,7 +41,7 @@ namespace TipCalc.Core.ViewModels
 		public double Total
 		{
 			get { return _total; }
-			set { _total = value; RaisePropertyChanged(() => Total); Recalc(); }
+			set { _total = value; RaisePropertyChanged(() => Total);}
 		}
 
 		private void Recalc()

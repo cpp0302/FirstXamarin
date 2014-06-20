@@ -1,29 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.Touch.Platform;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace TipCalc.Touch
 {
 	[Register("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : MvxApplicationDelegate
 	{
-		UIWindow window;
-		MyViewController viewController;
+		UIWindow _window;
 
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			window = new UIWindow(UIScreen.MainScreen.Bounds);
+			_window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			viewController = new MyViewController();
-			window.RootViewController = viewController;
+			var setup = new Setup(this, _window);
+			setup.Initialize();
 
-			window.MakeKeyAndVisible();
+			var startup = Mvx.Resolve<IMvxAppStart>();
+			startup.Start();
+
+			_window.MakeKeyAndVisible();
 
 			return true;
 		}
 	}
 }
-

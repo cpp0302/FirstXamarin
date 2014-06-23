@@ -1,15 +1,33 @@
 using Cirrious.MvvmCross.ViewModels;
+using System.Collections.Generic;
+using KittenView.Core.Services;
 
 namespace KittenView.Core.ViewModels
 {
     public class FirstViewModel 
 		: MvxViewModel
     {
-		private string _hello = "Hello MvvmCross";
-        public string Hello
-		{ 
-			get { return _hello; }
-			set { _hello = value; RaisePropertyChanged(() => Hello); }
+		public FirstViewModel(IKittenGenesisService service)
+		{
+			var newList = new List<Kitten>();
+			for (var i = 0; i < 100; i++)
+			{
+				var newKitten = service.CreateNewKitten(i.ToString());
+				newList.Add(newKitten);
+			}
+
+			Kittens = newList;
 		}
+
+		private List<Kitten> _kitten;
+		public List<Kitten> Kittens
+		{
+			get { return _kitten; }
+			set { _kitten = value; RaisePropertyChanged(() => Kittens); }
+		}
+
+
+		
+
     }
 }

@@ -5,7 +5,7 @@ using Cirrious.MvvmCross.Droid.Views;
 namespace KittenView.Droid
 {
     [Activity(
-		Label = "KittenView.Droid"
+		Label = "KittenView"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"

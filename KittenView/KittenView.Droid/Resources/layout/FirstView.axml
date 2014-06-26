@@ -7,5 +7,6 @@
     <Mvx.MvxListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        local:MvxBind="ItemSource Kittens" />
+        local:MvxBind="ItemSource Kittens"
+        local:MvxItemTemplate="@layout/item_kitten" />
 </LinearLayout>

@@ -8,6 +8,6 @@ namespace KittenView.Core.Services
 {
 	public interface IKittenGenesisService
 	{
-		Kitten CreateNewKitten(string extr = "");
+		Kitten CreateNewKitten(string extra = "");
 	}
 }

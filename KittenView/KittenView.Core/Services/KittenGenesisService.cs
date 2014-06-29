@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KittenView.Core.Services
 {
@@ -27,6 +24,7 @@ namespace KittenView.Core.Services
 			"Butler",
 			"Snoopy",
 			"Harry",
+			"Holly",
 			"Paws",
 			"Polly",
 			"Dixie",

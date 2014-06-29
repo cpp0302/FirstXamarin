@@ -19,15 +19,11 @@ namespace KittenView.Core.ViewModels
 			Kittens = newList;
 		}
 
-		private List<Kitten> _kitten;
+		private List<Kitten> _kittens;
 		public List<Kitten> Kittens
 		{
-			get { return _kitten; }
-			set { _kitten = value; RaisePropertyChanged(() => Kittens); }
+			get { return _kittens; }
+			set { _kittens = value; RaisePropertyChanged(() => Kittens); }
 		}
-
-
-		
-
     }
 }

@@ -4,11 +4,13 @@ using Cirrious.MvvmCross.Touch.Views;
 using MonoTouch.ObjCRuntime;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
+using Cirrious.MvvmCross.Binding.Touch.Views;
+using KittenView.Core.ViewModels;
 
 namespace KittenView.Touch.Views
 {
     [Register("FirstView")]
-    public class FirstView : MvxViewController
+    public class FirstView : MvxTableViewController
     {
         public override void ViewDidLoad()
         {
@@ -18,16 +20,15 @@ namespace KittenView.Touch.Views
 			// ios7 layout
             if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
                EdgesForExtendedLayout = UIRectEdge.None;
-			   
-            var label = new UILabel(new RectangleF(10, 10, 300, 40));
-            Add(label);
-            var textField = new UITextField(new RectangleF(10, 50, 300, 40));
-            Add(textField);
+			
+			var source = new MvxStandardTableViewSource(this.TableView, "TitleText Name;ImageUrl ImageUrl");
+			this.TableView.Source = source;
 
-            var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
-            set.Bind(label).To(vm => vm.Hello);
-            set.Bind(textField).To(vm => vm.Hello);
-            set.Apply();
+			var set = this.CreateBindingSet<FirstView, FirstViewModel>();
+			set.Bind(source).To(vm => vm.Kittens);
+			set.Apply();
+
+			TableView.ReloadData();
         }
     }
 }

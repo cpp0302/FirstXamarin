@@ -5,11 +5,11 @@ namespace Value.Core.ViewModels
     public class FirstViewModel 
 		: MvxViewModel
     {
-		private string _hello = "Hello MvvmCross";
-        public string Hello
-		{ 
-			get { return _hello; }
-			set { _hello = value; RaisePropertyChanged(() => Hello); }
+		string _foo;
+		public string Foo
+		{
+			get { return _foo; }
+			set { _foo = value; RaisePropertyChanged(() => Foo); }
 		}
     }
 }

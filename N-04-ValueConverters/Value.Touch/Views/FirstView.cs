@@ -23,12 +23,20 @@ namespace Value.Touch.Views
 			var textField = new UITextField(new RectangleF(10, 10, 300, 40));
 			Add(textField);
 
-			var label = new UILabel(new RectangleF(10, 50, 300, 40));
-			Add(label);
+			var label1 = new UILabel(new RectangleF(10, 50, 300, 40));
+			Add(label1);
+
+			var label2 = new UILabel(new RectangleF(10, 90, 300, 40));
+			Add(label2);
+
+			var label3 = new UILabel(new RectangleF(10, 130, 300, 40));
+			Add(label3);
 
 			var set = this.CreateBindingSet<FirstView, FirstViewModel>();
-			set.Bind(textField).To(vm => vm.Foo);
-			set.Bind(label).To(vm => vm.Foo).WithConversion("StringLength");
+			set.Bind(textField).To(vm => vm.Foo).WithConversion("StringReverse");
+			set.Bind(label1).To(vm => vm.Foo);
+			set.Bind(label2).To(vm => vm.Foo).WithConversion("StringLength");
+			set.Bind(label3).To(vm => vm.Foo).WithConversion("Special");
 			set.Apply();
 		}
 	}

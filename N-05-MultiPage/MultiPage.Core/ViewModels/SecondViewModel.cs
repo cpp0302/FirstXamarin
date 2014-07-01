@@ -9,7 +9,6 @@ namespace MultiPage.Core.ViewModels
 {
 	public class SecondViewModel : MvxViewModel
 	{
-
 		private string _name = "Second";
 		public string Name
 		{
@@ -17,6 +16,21 @@ namespace MultiPage.Core.ViewModels
 			set { _name = value; RaisePropertyChanged(() => Name); }
 		}
 
+
+		MvxCommand _goThirdCommand;
+		public System.Windows.Input.ICommand GoThirdCommand
+		{
+			get
+			{
+				_goThirdCommand = _goThirdCommand ?? new MvxCommand(DoGoThird);
+				return _goThirdCommand;
+			}
+		}
+
+		void DoGoThird()
+		{
+			ShowViewModel<ThirdViewModel>(new { question = "what time is it?" });
+		}
 
 	}
 }

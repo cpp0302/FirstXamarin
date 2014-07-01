@@ -28,5 +28,22 @@ namespace MultiPage.Core.ViewModels
 			this.Hello = this.Hello + " World";
 		}
 
+
+		MvxCommand _goSecondCommand;
+		public System.Windows.Input.ICommand GoSecondCommand
+		{
+			get
+			{
+				_goSecondCommand = _goSecondCommand ?? new MvxCommand(DoGoSecond);
+				return _goSecondCommand;
+			}
+		}
+
+		void DoGoSecond()
+		{
+			ShowViewModel<SecondViewModel>();
+		}
+
+
 	}
 }

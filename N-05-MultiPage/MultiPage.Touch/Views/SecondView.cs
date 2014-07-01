@@ -7,7 +7,7 @@ using MonoTouch.Foundation;
 
 namespace MultiPage.Touch.Views
 {
-    [Register("FirstView")]
+    [Register("SecondView")]
     public class SecondView : MvxViewController
     {
         public override void ViewDidLoad()

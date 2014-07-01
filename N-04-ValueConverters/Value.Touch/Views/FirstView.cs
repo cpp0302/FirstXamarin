@@ -28,7 +28,7 @@ namespace Value.Touch.Views
 
 			var set = this.CreateBindingSet<FirstView, FirstViewModel>();
 			set.Bind(textField).To(vm => vm.Foo);
-			set.Bind(label).To(vm => vm.Foo);
+			set.Bind(label).To(vm => vm.Foo).WithConversion("StringLength");
 			set.Apply();
 		}
 	}

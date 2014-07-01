@@ -23,15 +23,20 @@ namespace MultiPage.Touch.Views
 			Add(label);
 			var textField = new UITextField(new RectangleF(10, 50, 300, 40));
 			Add(textField);
-			var button = new UIButton(UIButtonType.RoundedRect);
-			button.SetTitle("Click Me", UIControlState.Normal);
-			button.Frame = new RectangleF(10, 90, 300, 40);
-			Add(button);
+			var button1 = new UIButton(UIButtonType.RoundedRect);
+			button1.SetTitle("Click Me", UIControlState.Normal);
+			button1.Frame = new RectangleF(10, 90, 300, 40);
+			Add(button1);
+			var button2 = new UIButton(UIButtonType.RoundedRect);
+			button2.SetTitle("Go Second", UIControlState.Normal);
+			button2.Frame = new RectangleF(10, 90, 300, 40);
+			Add(button2);
 
             var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
             set.Bind(label).To(vm => vm.Hello);
-            set.Bind(textField).To(vm => vm.Hello);
-			set.Bind(button).To(vm => vm.MyCommand);
+			set.Bind(textField).To(vm => vm.Hello);
+			set.Bind(button1).To(vm => vm.MyCommand);
+			set.Bind(button2).To(vm => vm.GoSecondCommand);
             set.Apply();
         }
     }

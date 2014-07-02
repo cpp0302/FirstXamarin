@@ -23,7 +23,7 @@ namespace MultiPage.Touch.Views
 			Add(label);
 			var button1 = new UIButton(UIButtonType.RoundedRect);
 			button1.SetTitle("Go Third", UIControlState.Normal);
-			button1.Frame = new RectangleF(10, 90, 300, 40);
+			button1.Frame = new RectangleF(10, 50, 300, 40);
 			Add(button1);
 
 			var set = this.CreateBindingSet<SecondView, Core.ViewModels.SecondViewModel>();

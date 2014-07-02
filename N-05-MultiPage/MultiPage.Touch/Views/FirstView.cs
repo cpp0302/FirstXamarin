@@ -18,18 +18,18 @@ namespace MultiPage.Touch.Views
 			// ios7 layout
             if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
                EdgesForExtendedLayout = UIRectEdge.None;
-			   
-            var label = new UILabel(new RectangleF(10, 10, 300, 40));
-			Add(label);
-			var textField = new UITextField(new RectangleF(10, 50, 300, 40));
+			
+			var textField = new UITextField(new RectangleF(10, 10, 300, 40));
 			Add(textField);
+			var label = new UILabel(new RectangleF(10, 50, 300, 40));
+			Add(label);
 			var button1 = new UIButton(UIButtonType.RoundedRect);
 			button1.SetTitle("Click Me", UIControlState.Normal);
 			button1.Frame = new RectangleF(10, 90, 300, 40);
 			Add(button1);
 			var button2 = new UIButton(UIButtonType.RoundedRect);
 			button2.SetTitle("Go Second", UIControlState.Normal);
-			button2.Frame = new RectangleF(10, 90, 300, 40);
+			button2.Frame = new RectangleF(10, 130, 300, 40);
 			Add(button2);
 
             var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
